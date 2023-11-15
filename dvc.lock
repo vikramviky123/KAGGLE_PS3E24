@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/smoker_status/e_pipeline/stg_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 5f0d4eec94f63c2db1374dfcd8711c4a
+      size: 1844
+    - path: src/smoker_status/e_pipeline/stg_01_data_ingestion.py
+      hash: md5
+      md5: dfb1e565ae15ae9ac1cd037e433006a0
+      size: 1044
+    outs:
+    - path: artifacts/data_ingestion/downloaded
+      hash: md5
+      md5: 70cb94710e577fea22581215d2f66cc0.dir
+      size: 8499687
+      nfiles: 2
+    - path: artifacts/data_ingestion/extracted
+      hash: md5
+      md5: 8729f3e9f69d7f66da0015a08e83f6c7.dir
+      size: 26972122
+      nfiles: 5

@@ -1,0 +1,21 @@
+pandas 
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+lightgbm
+optuna
+joblib
+pickle-mixin
+dvc
+python-box==6.0.2
+ensure==1.0.2
+pyYAML
+types-PyYAML
+mlflow==2.2.2
+notebook
+tqdm
+Flask
+Flask-Cors
+-e .

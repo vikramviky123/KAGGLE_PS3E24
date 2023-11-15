@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: smoker
+Version: 0.0.0
+Summary: Python Package for SMoker prediction
+Home-page: https://github.com/vikramviky123/KAGGLE_PS3E14
+Author: vikramviky123
+Author-email: vikram_viky2001@yahoo.com
+Project-URL: Bug Tracker, https://github.com/vikramviky123/KAGGLE_PS3E14/issues
+License-File: LICENSE
+
+# KAGGLE_PS3E24
+Binary Prediction of Smoker Status using Bio-Signals

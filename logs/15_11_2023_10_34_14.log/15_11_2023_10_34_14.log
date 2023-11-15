@@ -1,0 +1,63 @@
+[2023-11-15 10:34:15,429] 25 root - INFO - 
+
+x==========x
+
+>>>>>> stage DATA -- INGESTION -- STAGE started <<<<<<
+[2023-11-15 10:34:15,433] 31 root - INFO - yaml file: config\config.yaml loaded successfully
+[2023-11-15 10:34:15,434] 50 root - INFO - created directory at: artifacts
+[2023-11-15 10:34:15,435] 50 root - INFO - created directory at: artifacts/data_ingestion
+[2023-11-15 10:34:15,436] 50 root - INFO - created directory at: artifacts/data_ingestion/downloaded
+[2023-11-15 10:34:15,437] 50 root - INFO - created directory at: artifacts/data_ingestion/extracted
+[2023-11-15 10:34:19,412] 24 root - INFO - artifacts/data_ingestion/downloaded/smoker_syn.zip download! with following info: 
+X-GUploader-UploadID: ABPtcPrCE9IRJXELGGO-UPNzUU9FcIzJQjC5jYPASGIkySbfz8Eg8yEDWRpSUCTxHCuvfupXi_U
+Expires: Wed, 15 Nov 2023 05:04:06 GMT
+Date: Wed, 15 Nov 2023 05:04:06 GMT
+Cache-Control: private, max-age=0
+Last-Modified: Mon, 25 Sep 2023 19:08:45 GMT
+ETag: "d53c7b3c06aeea123b7d05cba8c13325"
+x-goog-generation: 1695668925945067
+x-goog-metageneration: 1
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 7141303
+Content-Type: application/zip
+Content-Disposition: attachment; filename=playground-series-s3e24.zip
+x-goog-hash: crc32c=jCE5qQ==
+x-goog-hash: md5=1Tx7PAau6hI7fQXLqMEzJQ==
+x-goog-storage-class: MULTI_REGIONAL
+Accept-Ranges: bytes
+Content-Length: 7141303
+Server: UploadServer
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+
+
+[2023-11-15 10:34:21,958] 32 root - INFO - artifacts/data_ingestion/downloaded/smoker_act.zip download! with following info: 
+X-GUploader-UploadID: ABPtcPriKkFNo7VNXXjRCUtrg8dxMVI2Uug9zM6LOyoaLNT_CY9Bp_kLkNnHsWi7SQ761YN1Wxo
+Expires: Wed, 15 Nov 2023 05:04:10 GMT
+Date: Wed, 15 Nov 2023 05:04:10 GMT
+Cache-Control: private, max-age=0
+Last-Modified: Tue, 26 Jul 2022 15:45:28 GMT
+ETag: "464f321a7a233a6446f3e0a459689050"
+x-goog-generation: 1658850328174973
+x-goog-metageneration: 1
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 1358384
+Content-Type: application/zip
+x-goog-hash: crc32c=TSTGfA==
+x-goog-hash: md5=Rk8yGnojOmRG8+CkWWiQUA==
+x-goog-storage-class: MULTI_REGIONAL
+Accept-Ranges: bytes
+Content-Length: 1358384
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Content-Type
+Access-Control-Expose-Headers: User-Agent
+Server: UploadServer
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+
+ into downloaded and extracted folder
+[2023-11-15 10:34:22,193] 29 root - INFO - >>>>>> stage DATA -- INGESTION -- STAGE completed <<<<<<
+
+x==========x
+
+
