@@ -1,0 +1,4 @@
+globalparams:
+  RANDOM_STATE: 42
+  N_SPLITS: 5
+  N_TRIALS: 3

@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 5f0d4eec94f63c2db1374dfcd8711c4a
-      size: 1844
+      md5: ca1c81edda82cbbb8490e7ded0efdcbc
+      size: 2045
     - path: src/smoker_status/e_pipeline/stg_01_data_ingestion.py
       hash: md5
       md5: dfb1e565ae15ae9ac1cd037e433006a0
@@ -22,3 +22,25 @@ stages:
       md5: 8729f3e9f69d7f66da0015a08e83f6c7.dir
       size: 26972122
       nfiles: 5
+  data_transformation:
+    cmd: python src/smoker_status/e_pipeline/stg_02_data_transformation.py
+    deps:
+    - path: artifacts/data_ingestion/extracted
+      hash: md5
+      md5: 8729f3e9f69d7f66da0015a08e83f6c7.dir
+      size: 26972122
+      nfiles: 5
+    - path: config/config.yaml
+      hash: md5
+      md5: ca1c81edda82cbbb8490e7ded0efdcbc
+      size: 2045
+    - path: src/smoker_status/e_pipeline/stg_02_data_transformation.py
+      hash: md5
+      md5: 35b43a0e666b34e7c0f3506daf941ba8
+      size: 1086
+    outs:
+    - path: artifacts/data_transformation
+      hash: md5
+      md5: 79375f43041f0a512933d65d7f1a6e5b.dir
+      size: 14778483
+      nfiles: 2

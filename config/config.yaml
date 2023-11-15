@@ -8,3 +8,15 @@ data_ingestion:
   extracted_dir: artifacts/data_ingestion/extracted
   file_path_syn: artifacts/data_ingestion/downloaded/smoker_syn.zip
   file_path_act: artifacts/data_ingestion/downloaded/smoker_act.zip
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path_syn: artifacts/data_ingestion/extracted/train.csv
+  data_path_act: artifacts/data_ingestion/extracted/train_dataset.csv
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  train_data_path: artifacts/data_transformation/train.csv
+  test_data_path: artifacts/data_transformation/test.csv
+  model_name: trained_models.joblib
+  target: smoking

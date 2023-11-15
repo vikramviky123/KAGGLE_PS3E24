@@ -1,0 +1,149 @@
+lgbm_classifier:
+  objective:
+    type: categorical
+    choices: [binary]
+
+  boosting_type:
+    type: categorical
+    choices: [gbdt, dart]
+
+  n_estimators:
+    type: int
+    low: 800
+    high: 2000
+    step: 20
+
+  learning_rate:
+    type: float
+    low: 0.001
+    high: 0.1
+
+  num_leaves:
+    type: int
+    low: 31
+    high: 100
+    step: 1
+
+  max_depth:
+    type: categorical
+    choices: [null, 3, 5, 7]
+
+  min_child_samples:
+    type: int
+    low: 20
+    high: 100
+    step: 5
+
+  subsample:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  colsample_bytree:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  verbose:
+    type: categorical
+    choices: [-1]
+
+xgb_classifier:
+  objective:
+    type: categorical
+    choices: ["binary:logistic"]
+
+  booster:
+    type: categorical
+    choices: [gbtree]
+
+  tree_method:
+    type: categorical
+    choices: [hist]
+
+  n_estimators:
+    type: int
+    low: 800
+    high: 2000
+    step: 20
+
+  learning_rate:
+    type: float
+    low: 0.0001
+    high: 0.1
+
+  max_leaves:
+    type: int
+    low: 10
+    high: 100
+    step: 5
+
+  max_depth:
+    type: categorical
+    choices: [null, 3, 5, 7]
+
+  subsample:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  colsample_bytree:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  max_bin:
+    type: int
+    low: 50
+    high: 255
+    step: 5
+
+histgradient_boost_classifier:
+  learning_rate:
+    type: float
+    low: 0.0001
+    high: 0.1
+
+  max_iter:
+    type: int
+    low: 800
+    high: 2000
+    step: 20
+
+  max_depth:
+    type: categorical
+    choices: [null, 3, 5, 7]
+
+  min_samples_leaf:
+    type: int
+    low: 1
+    high: 5
+    step: 1
+
+  max_bins:
+    type: int
+    low: 50
+    high: 255
+    step: 5
+
+  tol:
+    type: float
+    low: 0.000001
+    high: 0.1
+
+random_forest_classifier:
+  n_estimators:
+    type: int
+    low: 800
+    high: 2000
+    step: 20
+
+  max_depth:
+    type: categorical
+    choices: [null, 3, 5, 7]
+
+  min_samples_split:
+    type: int
+    low: 2
+    high: 5
+
+  min_samples_leaf:
+    type: int
+    low: 1
+    high: 5

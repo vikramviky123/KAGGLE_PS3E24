@@ -7,3 +7,21 @@ stages:
     outs:
       - artifacts/data_ingestion/downloaded
       - artifacts/data_ingestion/extracted
+  data_transformation:
+    cmd: python src/smoker_status/e_pipeline/stg_02_data_transformation.py
+    deps:
+      - src/smoker_status/e_pipeline/stg_02_data_transformation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/extracted
+    outs:
+      - artifacts/data_transformation
+
+  model_trainer:
+    cmd: python src/smoker_status/e_pipeline/stg_03_model_training.py
+    deps:
+      - src/smoker_status/e_pipeline/stg_03_model_training.py
+      - config/config.yaml
+      - artifacts/data_transformation
+    outs:
+      - artifacts/model_trainer
+      - bestparams.yaml
