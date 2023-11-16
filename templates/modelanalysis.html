@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <div id="model">
+    <h1>Model Analysis</h1>
+
+    <div class="content">
+        <h2>1. Ensemble of 4 Models for Training</h2>
+        <p>Training involves the use of four different models for Classification:</p>
+        <ul>
+            <li>Random Forest Classifier</li>
+            <li>Historical Gradient Boosting Machine Classifier</li>
+            <li>XGBoost Classifier</li>
+            <li>LightGBM Classifier</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>2. Model Training</h2>
+        <p>Model training is performed using k-fold cross-validation with 5 splits. The average of predicted values is computed to evaluate the model's performance.</p>
+    </div>
+
+    <div class="content">
+        <h2>3. Metrics Chosen</h2>
+        <p>The following metrics are chosen to assess model performance:</p>
+            <ul>
+                <li>Accuracy</li>
+                <li>Precision</li>
+                <li>Recall</li>
+                <li>F1-score</li>
+                <li>ROC-AUC</li>
+            </ul>
+
+    </div>
+
+    
+    <!-- Additional content based on provided data -->
+    <div class="content">
+        <h2>5. Model Evaluation Metrics for Classification</h2>
+        <table class="results-table">
+            <tr>
+                <th>Model</th>
+                <th>Validation (acc, prc, rec, f1, roc)</th>
+                <th>Test (acc, prc, rec, f1, roc)</th>
+            </tr>
+            <tr>
+                <td>lgbm_classifier</td>
+                <td>0.780, 0.716, 0.798, 0.755, 0.865</td>
+                <td>0.780, 0.720, 0.796, 0.756, 0.865</td>
+            </tr>
+            <tr>
+                <td>xgb_classifier</td>
+                <td>0.635, 0.828, 0.177, 0.292, 0.835</td>
+                <td>0.634, 0.838, 0.179, 0.295, 0.837</td>
+            </tr>
+            <tr>
+                <td>histgradient_boost_classifier</td>
+                <td>0.717, 0.723, 0.541, 0.619, 0.822</td>
+                <td>0.718, 0.730, 0.542, 0.622, 0.823</td>
+            </tr>
+            <tr>
+                <td>random_forest_classifier</td>
+                <td>0.739, 0.672, 0.752, 0.710, 0.819</td>
+                <td>0.740, 0.676, 0.752, 0.712, 0.822</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Best Accuracy Model is -----> lgbm_classifier (0.780)</h2><br>
+    <h2>Best Precision Model is -----> xgb_classifier (0.828)</h2><br>
+    <h2>Best Recall Model is -----> lgbm_classifier (0.798)</h2><br>
+    <h2>Best F1-score Model is -----> lgbm_classifier (0.755)</h2><br>
+    <h2>Best ROC-AUC Model is -----> lgbm_classifier (0.865)</h2>
+</div>
+<h2><span class="highlight-yellow">Going Forward with LGBM Classifier</span></h2>
+
+{% endblock %}

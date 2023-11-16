@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1> Smoker or Not Prediction</h1>
+    <section id="Intro">
+
+        <h1 class="h-primary"><span>Welcome to Prediction if a person is a Smoker or Not</span></h1>
+
+        <p>
+            The dataset for this exercise is a smoking prediction dataset, and our goal is to predict the target variable `smoking` based on various components and characteristics of individuals.
+        </p>
+
+    </section>
+
+    <section id="Intro">
+
+        <h1><span>Context:</span></h1>
+        <p>
+            This dataset encompasses information about different health and lifestyle aspects of individuals, including factors like age, height, weight, cholesterol levels, and more. Our objective is to predict whether a person is a smoker or not based on these features.
+        </p>
+
+    </section>
+
+    <section id="Intro">
+
+        <p>The dataset includes the following independent variables:</p>
+
+        <h2 class="h-secondary"><span>Independent Variables:</span></h2>
+
+        <ul class="data-list">
+            <li>age&nbsp&nbsp&nbsp&nbsp: Age of the individual.</li>
+            <li>height(cm)&nbsp&nbsp&nbsp&nbsp: Height of the individual in centimeters.</li>
+            <li>weight(kg)&nbsp&nbsp&nbsp&nbsp: Weight of the individual in kilograms.</li>
+            <li>waist(cm)&nbsp&nbsp&nbsp&nbsp: Waist size of the individual in centimeters.</li>
+            <li>eyesight(left)&nbsp&nbsp&nbsp&nbsp: Eyesight in the left eye.</li>
+            <li>eyesight(right)&nbsp&nbsp&nbsp&nbsp: Eyesight in the right eye.</li>
+            <li>hearing(left)&nbsp&nbsp&nbsp&nbsp: Hearing ability in the left ear.</li>
+            <li>hearing(right)&nbsp&nbsp&nbsp&nbsp: Hearing ability in the right ear.</li>
+            <li>systolic&nbsp&nbsp&nbsp&nbsp: Systolic blood pressure.</li>
+            <li>relaxation&nbsp&nbsp&nbsp&nbsp: Relaxation blood pressure.</li>
+            <li>fasting blood sugar&nbsp&nbsp&nbsp&nbsp: Fasting blood sugar level.</li>
+            <li>Cholesterol&nbsp&nbsp&nbsp&nbsp: Cholesterol level.</li>
+            <li>triglyceride&nbsp&nbsp&nbsp&nbsp: Triglyceride level.</li>
+            <li>HDL&nbsp&nbsp&nbsp&nbsp: HDL cholesterol level.</li>
+            <li>LDL&nbsp&nbsp&nbsp&nbsp: LDL cholesterol level.</li>
+            <li>hemoglobin&nbsp&nbsp&nbsp&nbsp: Hemoglobin level.</li>
+            <li>Urine protein&nbsp&nbsp&nbsp&nbsp: Presence of urine protein.</li>
+            <li>serum creatinine&nbsp&nbsp&nbsp&nbsp: Serum creatinine level.</li>
+            <li>AST&nbsp&nbsp&nbsp&nbsp: AST (aspartate aminotransferase) level.</li>
+            <li>ALT&nbsp&nbsp&nbsp&nbsp: ALT (alanine aminotransferase) level.</li>
+            <li>Gtp&nbsp&nbsp&nbsp&nbsp: Gtp level.</li>
+            <li>dental caries&nbsp&nbsp&nbsp&nbsp: Presence of dental caries.</li>
+            <li>smoking&nbsp&nbsp&nbsp&nbsp: Target variable indicating whether the individual is a smoker or not.</li>
+        </ul>
+
+        <h2 class="h-secondary"><span>Metrics:</span></h2>
+        <p>You can evaluate the model using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html" target="_blank">Roc Auc Score (Roc_Auc)</a> metric.</p>
+    </section>
+
+{% endblock %}

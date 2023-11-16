@@ -25,3 +25,11 @@ stages:
     outs:
       - artifacts/model_trainer
       - bestparams.yaml
+
+  model_eval:
+    cmd: python src/smoker_status/e_pipeline/stg_04_model_eval.py
+    deps:
+      - src/smoker_status/e_pipeline/stg_04_model_eval.py
+      - config/config.yaml
+      - bestparams.yaml
+      - artifacts/model_trainer

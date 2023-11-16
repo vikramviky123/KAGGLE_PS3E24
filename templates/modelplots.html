@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <div id="model">
+    <h1>Model Plots</h1>
+   
+    
+    <div class="content">
+        <h2>1. Post Processing</h2>
+            <div class="content">
+                <h2>Test Data Metrics</h2>
+                <ul>
+                    <li>Accuracy Score: 0.778</li>
+                    <li>Precision Score: 0.695</li>
+                    <li>Recall Score: 0.856</li>
+                    <li>F1 Score: 0.767</li>
+                    <li>ROC_AUC Score: 0.866</li>
+                </ul>
+            </div>
+
+
+        <p>Post-processing involves  </p>
+        <p>Confusion matrix and roc_auc curve </p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/ConfusionMatrix_ROC_AUC_Curve_plot.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+        <p>Probability Calibration Plot</p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/calibration_plot.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+        <p>Feature Importance Plot</p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Feature_Importance.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+
+        <p>Permutaion Importance Plot</p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Permutation_Importance.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

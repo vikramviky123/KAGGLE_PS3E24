@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1>Bivariate Analysis</h1>
+    <h2>Bivariate Plot</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/age_vs_triglyceride.jpg') }}" alt="age_vs_triglyceride Analysis">
+    </div>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/Urine protein_vs_triglyceride.jpg') }}" alt="Urine protein_vs_triglyceride Analysis">
+    </div>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/weight(kg)_vs_triglyceride.jpg') }}" alt="weight(kg)_vs_triglyceride Analysis">
+    </div>
+
+    <h2>Pair Plot</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/pairplot.jpg') }}" alt="Pair Plot Bivariate Analysis">
+    </div>
+
+    <br>
+    <h2>Correlation Plot Spearman</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/Correlation Plot_spearman.jpg') }}" alt="Correlation Plot (Spearman) Bivariate Analysis">
+    </div>
+  
+    <div id="summary">
+        <h2>Summary of Bivariate Analysis</h2>
+    
+    
+        <div class="summary-section">
+         
+            <ul>
+                <li>Trygliceride, HDL, Hemoglobin has good distribution with smoking status.</li>
+                <li>Correlation are overall a mild phenonomena.</li>
+                <li>LDL and cholestral have strong positive correlation.</li>
+                <li>AST and ALT have strong positive correlation.</li>
+                <li>Age in negative correlation with weight, height, eyesight, HDL.</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+{% endblock %}

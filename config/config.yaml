@@ -20,3 +20,11 @@ model_trainer:
   test_data_path: artifacts/data_transformation/test.csv
   model_name: trained_models.joblib
   target: smoking
+
+model_eval:
+  root_dir: artifacts/model_evaluation
+  test_data_path: artifacts/data_transformation/test.csv
+  model_path: artifacts/model_trainer/trained_models.joblib
+  eval_results: artifacts/model_trainer/eval_results.joblib
+  best_params: artifacts/model_trainer/best_params.joblib
+  mlflow_uri: https://dagshub.com/vikramviky123/KAGGLE_PS3E24.mlflow

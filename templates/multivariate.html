@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1>Multivariate Analysis</h1>
+    <h2>Multi-variate Plot</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/multi_plots/age_vs_HDL.jpg') }}" alt="age_vs_HDLAnalysis">
+    </div>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/multi_plots/bmi_vs_HDL.jpg') }}" alt="bmi_vs_HDL Analysis">
+    </div>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/multi_plots/dental caries_vs_HDL.jpg') }}" alt="dental caries_vs_HDL Analysis">
+    </div>
+
+
+
+  
+    <div id="summary">
+        <h2>Summary of Multi-variate Analysis</h2>
+    
+    
+        <div class="summary-section">
+         
+            <ul>
+                <li>Trygliceride, HDL, Hemoglobin holds key information for smoking status.</li>
+    
+            </ul>
+        </div>
+
+    </div>
+
+{% endblock %}

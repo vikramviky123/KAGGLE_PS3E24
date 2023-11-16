@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+<div id="uni">
+    <div>
+        <h1>Univariate Analysis</h1>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/HDL.jpg') }}" alt="HDL Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/hemoglobin.jpg') }}" alt="hemoglobin Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/triglyceride.jpg') }}" alt="triglyceride Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/DitributionPlots.jpg') }}" alt="Distribution Plot">
+        </div>
+          
+    </div>
+
+   <!-- Summary Section -->
+   <div id="summary">
+       <h2>Summary of Univariate Analysis</h2>
+
+       <div class="summary-section">
+           <h3>Descriptive</h3>
+           <ul>
+               <li>The data has ordinal and continuous data.</li>
+               <li>Smoker = 1, not smoker =0</li>
+               <li>Distributions are skewed.</li>
+           </ul>
+       </div>
+
+       <div class="summary-section">
+           <h3>Univariate</h3>
+           <ul>
+               <li>All distributions are not Normal.</li>
+               <li>Outliers were present and were only mild.</li>
+           </ul>
+       </div>
+   </div>
+</div>
+
+{% endblock %}

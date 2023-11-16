@@ -130,11 +130,6 @@ def optimize_hyperparameters(X, y, estimator, hyperparameters, metric_name=roc_a
 
     # Get the best hyperparameters
     best_params = study.best_params
-    print("Best Hyperparameters:", best_params)
-
-    # Train the final model with the best hyperparameters
-    # best_model = estimator(**best_params, random_state=42)
-    # best_model.fit(X, y)
 
     return best_params
 

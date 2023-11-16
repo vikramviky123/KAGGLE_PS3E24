@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section id="data-summary">
+    <h1 class="h-secondary">Data Summary</h1>
+    <p><strong>Total number of Rows:</strong> 198240</p>
+    <p><strong>Total number of Columns:</strong> 24</p>
+    <hr class="summary-divider">
+    <p class="summary-subheader">Checking for Null values</p>
+    <p><strong>Total number of Null values present in all Columns:</strong> <span class="highlight-yellow">0</span></p>
+    <hr class="summary-divider">
+    <p class="summary-subheader">Checking for Duplicate values</p>
+    <p><strong>Total number of duplicates present in all Columns:</strong> <span class="highlight-yellow">5517</span></p>
+    <p>Duplicates have been dropped</p>
+    <p>Index reset has been performed</p>
+</section>
+
+<section id="data-summary">
+    <h2 class="h-secondary">Summary of Data</h2>
+    <ul>
+        <li>The dataset has 24 independent variables and 1 dependent variable.</li>
+        <li><strong>Null</strong> values have <strong>NOT</strong> been found.</li>
+        <li><strong>5517 Duplicate</strong> values have been found and dropped.</li>
+    </ul>
+    <hr class="summary-divider">
+    <p><strong>The dataset</strong> contains `two` distinct `datatypes`:</p>
+    <ul>
+        <li>float</li>
+        <li>int</li>
+    </ul>
+</section>
+
+<section id="changes-moving-forward">
+    <h2 class="h-secondary">Changes Moving Forward</h2>
+    <ul>
+        <li>Dropping the duplicates</li>
+        <li>Resetting the index</li>
+    </ul>
+</section>
+
+{% endblock %}

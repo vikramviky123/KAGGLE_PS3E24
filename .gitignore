@@ -26,3 +26,7 @@ smoker/*
 research/*
 artifacts/*
 logs/*
+/bestparams.yaml
+
+mlruns/*
+

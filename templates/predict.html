@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <h1>Enter Details of Person</h1>
+
+   <form action="/predict" method="post" class="form">
+    <!-- Other form elements... -->
+    <div class="form-columns">
+    <!-- Column 1 -->
+    <div class="form-column">
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" placeholder="Age (e.g., 40)" value="40">
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height (cm):</label>
+            <input type="text" id="height" name="height" placeholder="Height (cm) (e.g., 150)" value="150">
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="text" id="weight" name="weight" placeholder="Weight (kg) (e.g., 45)" value="45">
+        </div>
+
+        <div class="form-group">
+            <label for="waist">Waist (cm):</label>
+            <input type="text" id="waist" name="waist" placeholder="Waist (cm) (e.g., 66.5)" value="66.5">
+        </div>
+
+        <div class="form-group">
+            <label for="eyesight_left">Eyesight (left):</label>
+            <input type="text" id="eyesight_left" name="eyesight_left" placeholder="Eyesight (left) (e.g., 0.6)" value="0.6">
+        </div>
+
+        <div class="form-group">
+            <label for="eyesight_right">Eyesight (right):</label>
+            <input type="text" id="eyesight_right" name="eyesight_right" placeholder="Eyesight (right) (e.g., 0.5)" value="0.5">
+        </div>
+
+        <div class="form-group">
+            <label for="hearing_left">Hearing (left):</label>
+            <input type="text" id="hearing_left" name="hearing_left" placeholder="Hearing (left) (e.g., 1)" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="hearing_right">Hearing (right):</label>
+            <input type="text" id="hearing_right" name="hearing_right" placeholder="Hearing (right) (e.g., 1)" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="systolic">Systolic Blood Pressure:</label>
+            <input type="text" id="systolic" name="systolic" placeholder="Systolic Blood Pressure (e.g., 108)" value="108">
+        </div>
+
+        <div class="form-group">
+            <label for="relaxation">Relaxation Blood Pressure:</label>
+            <input type="text" id="relaxation" name="relaxation" placeholder="Relaxation Blood Pressure (e.g., 64)" value="64">
+        </div>
+
+        <div class="form-group">
+            <label for="fasting_blood_sugar">Fasting Blood Sugar:</label>
+            <input type="text" id="fasting_blood_sugar" name="fasting_blood_sugar" placeholder="Fasting Blood Sugar (e.g., 85)" value="85">
+        </div>
+
+
+    </div>
+
+    <!-- Column 2 -->
+    <div class="form-column">
+        <div class="form-group">
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="text" id="cholesterol" name="cholesterol" placeholder="Cholesterol (e.g., 186)" value="186">
+        </div>
+
+        <div class="form-group">
+            <label for="triglyceride">Triglyceride:</label>
+            <input type="text" id="triglyceride" name="triglyceride" placeholder="Triglyceride (e.g., 108)" value="108">
+        </div>
+        <div class="form-group">
+            <label for="hdl">HDL Cholesterol:</label>
+            <input type="text" id="hdl" name="hdl" placeholder="HDL Cholesterol (e.g., 81)" value="81">
+        </div>
+
+        <div class="form-group">
+            <label for="ldl">LDL Cholesterol:</label>
+            <input type="text" id="ldl" name="ldl" placeholder="LDL Cholesterol (e.g., 82)" value="82">
+        </div>
+
+        <div class="form-group">
+            <label for="hemoglobin">Hemoglobin:</label>
+            <input type="text" id="hemoglobin" name="hemoglobin" placeholder="Hemoglobin (e.g., 13.6)" value="13.6">
+        </div>
+
+        <div class="form-group">
+            <label for="urine_protein">Urine Protein:</label>
+            <input type="text" id="urine_protein" name="urine_protein" placeholder="Urine Protein (e.g., 1)" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="serum_creatinine">Serum Creatinine:</label>
+            <input type="text" id="serum_creatinine" name="serum_creatinine" placeholder="Serum Creatinine (e.g., 0.8)" value="0.8">
+        </div>
+
+        <div class="form-group">
+            <label for="ast">AST:</label>
+            <input type="text" id="ast" name="ast" placeholder="AST (e.g., 23)" value="23">
+        </div>
+
+        <div class="form-group">
+            <label for="alt">ALT:</label>
+            <input type="text" id="alt" name="alt" placeholder="ALT (e.g., 14)" value="14">
+        </div>
+
+        <div class="form-group">
+            <label for="gtp">GTP:</label>
+            <input type="text" id="gtp" name="gtp" placeholder="GTP (e.g., 16)" value="16">
+        </div>
+
+        <div class="form-group">
+            <label for="dental_caries">Dental Caries:</label>
+            <input type="text" id="dental_caries" name="dental_caries" placeholder="Dental Caries (e.g., 0)" value="0">
+        </div>
+
+
+    </div>
+</div>
+
+
+
+    <input type="submit" value="Predict SMOKER or NOT">
+</form>
+
+   <div class="result">
+    The Prediction is : <span>{{predicted_smoker}}</span>
+    The Predicted probability is : <span>{{proba}}</span>
+   </div>
+
+   <div class="error">
+    Error Message: {{error_message}}
+   </div>
+
+{% endblock %}
